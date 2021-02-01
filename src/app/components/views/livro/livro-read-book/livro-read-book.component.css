@@ -1,0 +1,15 @@
+form {
+    width: 90%;
+    margin: auto;
+    overflow: hidden;
+}
+
+.home {
+    margin: 1rem auto;
+    text-align: center;
+    width: 95%;
+}
+
+button {
+    width: 100%;
+}

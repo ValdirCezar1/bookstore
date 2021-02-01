@@ -1,0 +1,57 @@
+import { NgModule } from '@angular/core';
+import { Routes, RouterModule } from '@angular/router';
+import { CategoriaCreateComponent } from './components/views/categoria/categoria-create/categoria-create.component';
+import { CategoriaDeleteComponent } from './components/views/categoria/categoria-delete/categoria-delete.component';
+import { CategoriaReadComponent } from './components/views/categoria/categoria-read/categoria-read.component';
+import { CategoriaUpdateComponent } from './components/views/categoria/categoria-update/categoria-update.component';
+import { HomeComponent } from './components/views/home/home.component';
+import { LivroCreateComponent } from './components/views/livro/livro-create/livro-create.component';
+import { LivroReadBookComponent } from './components/views/livro/livro-read-book/livro-read-book.component';
+import { LivroReadComponent } from './components/views/livro/livro-read/livro-read.component';
+import { LivroUpdateComponent } from './components/views/livro/livro-update/livro-update.component';
+
+const routes: Routes = [
+  {
+    path: '',
+    component: HomeComponent
+  },
+  {
+    path: 'categorias',
+    component: CategoriaReadComponent
+  },
+  {
+    path: 'categorias/create',
+    component: CategoriaCreateComponent
+  },
+  {
+    path: 'categorias/delete/:id',
+    component: CategoriaDeleteComponent
+  },
+  {
+    path: 'categorias/update/:id',
+    component: CategoriaUpdateComponent
+  },
+  {
+    path: 'categorias/:id_cat/livros',
+    component: LivroReadComponent
+  },
+  {
+    path: 'categorias/:id_cat/livros/create',
+    component: LivroCreateComponent
+  },
+  {
+    path: 'categorias/:id_cat/livros/:id/update',
+    component: LivroUpdateComponent
+  },
+  {
+    path: 'categorias/:id_cat/livros/:id/read',
+    component: LivroReadBookComponent
+  }
+
+];
+
+@NgModule({
+  imports: [RouterModule.forRoot(routes)],
+  exports: [RouterModule]
+})
+export class AppRoutingModule { }

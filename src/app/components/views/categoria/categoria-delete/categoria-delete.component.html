@@ -1,0 +1,19 @@
+<form>
+
+    <h1>CRIAR NOVA CATEGORIA</h1>
+
+    <mat-form-field class="form">
+        <mat-label>Name</mat-label>
+        <input [(ngModel)]="categoria.nome" matInput  type="text" name="nome" disabled>
+    </mat-form-field>
+
+    <mat-form-field class="form">
+        <mat-label>Descrição do categoria</mat-label>
+        <textarea [(ngModel)]="categoria.descricao" name="descricao" matInput maxlength="2000" disabled></textarea>
+     </mat-form-field>
+
+    <div class="buttons">
+        <button (click)="delete()" mat-stroked-button color="primary">DELETE</button>
+        <button (click)="cancel()" mat-stroked-button color="warn">CANCEL</button>
+    </div>
+</form>
